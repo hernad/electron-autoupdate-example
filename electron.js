@@ -4,6 +4,7 @@ let win; // this wills store the window object
 
 function createDefaultWindow() {
     win = new BrowserWindow({width: 900, height: 680});
+    
     win.loadURL(`file://${__dirname}/index.html`);
     win.on('closed', () => app.quit());
   return win;
@@ -15,7 +16,8 @@ autoUpdater.on('update-downloaded', (info) => {
 });
 app.on('ready', function() {
   createDefaultWindow();
-  autoUpdater.checkForUpdates();
+  //autoUpdater.checkForUpdates();
+  autoUpdater.checkForUpdatesAndNotify()
 });
 ipcMain.on("quitAndInstall", (event, arg) => {
     autoUpdater.quitAndInstall();

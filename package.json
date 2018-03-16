@@ -3,7 +3,7 @@
     "version": "0.2.1",
     "author": "hernad",
     "homepage": "./",
-    "description": "An example of an autoupdating electron app hernad",
+    "description": "autoupdating electron app hernad",
     "repository": "https://github.com/hernad/electron-autoupdate-example",
     "main": "electron.js",
     "dependencies": {
